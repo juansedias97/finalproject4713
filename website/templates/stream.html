@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Stream{% endblock %} 
+{% block style %}
+    <style>
+        video {
+            width: 630px;
+            height: 480px;
+        }
+        
+        .streamContainer {
+            border: 4px solid #0044fe;
+            background-color: lightgrey;
+            width: 630px;
+            margin: 2rem auto;
+            overflow: auto;
+            padding: 10px;
+            margin: auto;
+        }
+        
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block n2%}
+<a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+{% endblock %}
+
+{% block content%}
+<br>
+<br>
+<h1 align="center">Streaming Video</h1>
+<br />
+<div class="container">
+    <div class="streamContainer">
+        <video id= "stream" src="https://a4236b921139.ngrok.io/stream.ogg" type = "video/ogg;codecs=theora" autoplay = "autoplay"></video>
+    </div>
+</div>
+<br />
+
+<form method = "POST">
+    <div align = "center">
+        <button style ="height:50px;width:500px" type="submit" class="btn btn-primary">Back to Selection Screen</button>
+    </div>
+</form>
+{% endblock %}

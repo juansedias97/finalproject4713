@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} 
+
+{% block n2%}
+<a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+{% endblock %}
+
+{% block content%}
+<br />
+<h1 align="center">Static or Stream</h1>
+<br />
+
+<div class="container">
+    <center><img style = "height:450px;width:350px" src="/static/cnt.jpg" alt= "cnt">
+    </img></center>
+</div>
+<br />
+<form method = "POST">
+    <div align = "center">
+        <button style= "height:50px;width:500px" type="submit" name= "strm" class="btn btn-primary" value = "video">Static</button>
+    </div>
+</form>
+<br />
+<form method = "POST">
+    <div align = "center">
+        <button style= "height:50px;width:500px" type="submit" name= "strm" class="btn btn-primary" value = "cam">Stream</button>
+    </div>
+</form>
+{% endblock %}

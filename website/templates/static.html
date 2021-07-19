@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Static{% endblock %} 
+
+{% block n2%}
+<a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+{% endblock %}
+
+{% block content%}
+<br />
+<h1 align="center">Static Video</h1>
+<div class="streamContainer">
+    <center><video width="600" height="400" controls autoplay>
+        <source src="/static/vid.mp4" type="video/mp4">
+    </video></center>
+</div>
+<br />
+<form method = "POST">
+    <div align = "center">
+        <button style ="height:50px;width:470px" type="submit" class="btn btn-primary">Back to Selection Screen</button>
+    </div>
+</form>
+{% endblock %}
